@@ -157,8 +157,7 @@
         table.frame = CGRectMake(table.frame.origin.x, table.frame.origin.y, table.frame.size.width, height);
         scroll.contentSize = CGSizeMake([References screenWidth], table.frame.origin.y+table.frame.size.height+bottomBar.frame.size.height+4);
     }];
-    int scrollPoint = table.frame.origin.y + (SMALL *indexPath.row);
-        [scroll setContentOffset:CGPointMake(0, scrollPoint) animated:YES];
+    
     
     
 }
