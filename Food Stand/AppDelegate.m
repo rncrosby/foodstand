@@ -20,7 +20,8 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    if ([FBSDKAccessToken currentAccessToken]) {
+    bool signIn = [[NSUserDefaults standardUserDefaults] boolForKey:@"signedIn"];
+    if (signIn == YES) {
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"feedView"];

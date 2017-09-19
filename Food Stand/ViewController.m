@@ -15,18 +15,18 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    [References cornerRadius:facebookButton radius:10.0f];
+    [facebookButton
+     addTarget:self
+     action:@selector(loginButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     currentStage = 0;
     [References blurView:backgroundBlur];
-    [super viewDidLoad];
-    [References cornerRadius:facebookButton radius:10.0f];
-    [facebookButton
-     addTarget:self
-     action:@selector(loginButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -67,6 +67,8 @@
                         logo.frame = CGRectMake(logo.frame.origin.x, logo.frame.origin.y+170, logo.frame.size.width, logo.frame.size.height);
                         header.frame = CGRectMake(header.frame.origin.x, header.frame.origin.y+170, header.frame.size.width, header.frame.size.height);
                     } completion:^(bool finished){
+                        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"signedIn"];
+                        [[NSUserDefaults standardUserDefaults] synchronize];
                         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"feedView"];
                         [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];

@@ -8,6 +8,9 @@
 
 #import "feedView.h"
 
+#define SMALL 293
+#define BIG 430
+
 @interface feedView ()
 
 @end
@@ -28,6 +31,10 @@
     [foodItems addObject:cookie];
     [foodItems addObject:muffin];
     [foodItems addObject:cinnabon];
+    expandedRow = [[NSMutableArray alloc] init];
+    [expandedRow addObject:@"SMALL"];
+    [expandedRow addObject:@"SMALL"];
+    [expandedRow addObject:@"SMALL"];
     [table reloadData];
     [References tintUIButton:feedButton color:[header.textColor colorWithAlphaComponent:0.7] ];
     [References tintUIButton:postButton color:[header.textColor colorWithAlphaComponent:0.5]];
@@ -60,6 +67,8 @@
     [actionSheet addAction:[UIAlertAction actionWithTitle:@"Log Out" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {\
         FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
         [login logOut];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"signedIn"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"startView"];
         [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
@@ -96,34 +105,85 @@
     cell.name.text = food.name;
     [cell.image setImage:food.image];
     [References lightCardShadow:cell.shadow];
-    CCColorCube *colorCube = [[CCColorCube alloc] init];
-    NSArray *imgColors = [colorCube extractColorsFromImage:food.image flags:CCOnlyDistinctColors avoidColor:[UIColor blackColor]];
-    [cell.card setBackgroundColor:imgColors[1]];
-    [cell.price setBackgroundColor:imgColors[2]];
-    [References cornerRadius:cell.card radius:17.0];
-    [References cornerRadius:cell.price radius:8.0];
-    UIBezierPath *maskPath = [UIBezierPath
-                              bezierPathWithRoundedRect:cell.image.bounds
-                              byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight)
-                              cornerRadii:CGSizeMake(10, 10)
-                              ];
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    [References lightCardShadow:cell.actualShadow2];
+    [References lightCardShadow:cell.actualShadow3];
+    LEColorPicker *colorPicker = [[LEColorPicker alloc] init];
+    LEColorScheme *colorScheme = [colorPicker colorSchemeFromImage:food.image];
     
-    maskLayer.frame = cell.image.bounds;
-    maskLayer.path = maskPath.CGPath;
-    cell.image.layer.mask = maskLayer;
+//    CCColorCube *colorCube = [[CCColorCube alloc] init];
+//    NSArray *imgColors = [colorCube extractColorsFromImage:food.image flags:CCOnlyDistinctColors avoidColor:[UIColor blackColor]];
+    [cell.card setBackgroundColor:[colorScheme backgroundColor]];
+    [cell.card2 setBackgroundColor:[colorScheme backgroundColor]];
+    [cell.price setBackgroundColor:[colorScheme primaryTextColor]];
+    [cell.control setOnTintColor:[colorScheme primaryTextColor]];
+    [References cornerRadius:cell.card radius:17.0];
+    [References cornerRadius:cell.image radius:17.0];
+    [References cornerRadius:cell.topShadow radius:17.0];
+    [References cornerRadius:cell.bottomShadow radius:17.0];
+    [References cornerRadius:cell.payButton radius:12.0];
+    [References cornerRadius:cell.card2 radius:17.0];
+    [References cornerRadius:cell.bottomShadow2 radius:17.0];
+    [References cornerRadius:cell.price radius:8.0];
     [cell setBackgroundColor:[UIColor clearColor]];
+    [References blurView:cell.blur];
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    feedCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    for (int a = 0; a < expandedRow.count; a++) {
+        if (a == indexPath.row) {
+            if ([expandedRow[a] isEqualToString:@"BIG"]) {
+                expandedRow[a] = @"SMALL";
+            } else {
+            expandedRow[a] = @"BIG";
+            }
+        } else {
+            expandedRow[a] = @"SMALL";
+        }
+    }
+    [tableView beginUpdates];
+    [tableView endUpdates];
+    int height = 0;
+    for (int a = 0; a < expandedRow.count; a++) {
+        if ([expandedRow[a] isEqualToString:@"SMALL"]) {
+            height = height + SMALL;
+        } else {
+            height = height + BIG;
+        }
+        
+    }
+    [UIView animateWithDuration:0.3 animations:^(void){
+        table.frame = CGRectMake(table.frame.origin.x, table.frame.origin.y, table.frame.size.width, height);
+        scroll.contentSize = CGSizeMake([References screenWidth], table.frame.origin.y+table.frame.size.height+bottomBar.frame.size.height+4);
+    }];
+    int scrollPoint = table.frame.origin.y + (SMALL *indexPath.row);
+        [scroll setContentOffset:CGPointMake(0, scrollPoint) animated:YES];
+    
+    
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    table.frame = CGRectMake(table.frame.origin.x, table.frame.origin.y, table.frame.size.width, 294*foodItems.count);
+    int height = 0;
+    for (int a = 0; a < expandedRow.count; a++) {
+        if ([expandedRow[a] isEqualToString:@"SMALL"]) {
+            height = height + SMALL;
+        } else {
+            height = height + BIG;
+        }
+    
+    }
+    table.frame = CGRectMake(table.frame.origin.x, table.frame.origin.y, table.frame.size.width, height);
     scroll.contentSize = CGSizeMake([References screenWidth], table.frame.origin.y+table.frame.size.height+bottomBar.frame.size.height+4);
     return foodItems.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 294;
+    if ([expandedRow[indexPath.row] isEqualToString:@"SMALL"]) {
+        return SMALL;
+    } else {
+        return BIG;
+    }
+    
 }
 
 -(BOOL)prefersStatusBarHidden{

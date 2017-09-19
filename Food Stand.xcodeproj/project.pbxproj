@@ -20,10 +20,18 @@
 		D46059CA1F708C170030D3D7 /* foodItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059C91F708C170030D3D7 /* foodItem.m */; };
 		D46059CE1F708D280030D3D7 /* feedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059CC1F708D280030D3D7 /* feedCell.m */; };
 		D46059CF1F708D280030D3D7 /* feedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46059CD1F708D280030D3D7 /* feedCell.xib */; };
-		D46059F61F70AC680030D3D7 /* CCLocalMaximum.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059F21F70AC670030D3D7 /* CCLocalMaximum.m */; };
-		D46059F71F70AC680030D3D7 /* CCColorCube.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059F31F70AC670030D3D7 /* CCColorCube.m */; };
 		D46059FB1F70CAA40030D3D7 /* muffin.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D46059FA1F70CA980030D3D7 /* muffin.jpeg */; };
 		D46059FD1F70D0740030D3D7 /* cinnabon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D46059FC1F70D0680030D3D7 /* cinnabon.jpeg */; };
+		D4835DCC1F718D6E00F1FF61 /* UIColor+YUVSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = D4835DC81F718D6E00F1FF61 /* UIColor+YUVSpace.m */; };
+		D4835DCD1F718D6E00F1FF61 /* LEColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D4835DCB1F718D6E00F1FF61 /* LEColorPicker.m */; };
+		D4835DD51F719E1800F1FF61 /* dairy.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DD11F719E0E00F1FF61 /* dairy.png */; };
+		D4835DD61F719E1800F1FF61 /* delivery.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DD01F719E0E00F1FF61 /* delivery.png */; };
+		D4835DD71F719E1800F1FF61 /* milk.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DD41F719E0E00F1FF61 /* milk.png */; };
+		D4835DD81F719E1800F1FF61 /* nut.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DD31F719E0E00F1FF61 /* nut.png */; };
+		D4835DD91F719E1800F1FF61 /* pickup.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DCE1F719E0E00F1FF61 /* pickup.png */; };
+		D4835DDA1F719E1800F1FF61 /* sugar.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DCF1F719E0E00F1FF61 /* sugar.png */; };
+		D4835DDB1F719E1800F1FF61 /* wheat.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DD21F719E0E00F1FF61 /* wheat.png */; };
+		D4835DDD1F71A0B900F1FF61 /* pay.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DDC1F71A0B100F1FF61 /* pay.png */; };
 		D4A80AE81F7065DF005926B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A80AE71F7065DF005926B2 /* AppDelegate.m */; };
 		D4A80AEB1F7065DF005926B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A80AEA1F7065DF005926B2 /* ViewController.m */; };
 		D4A80AF01F7065DF005926B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A80AEF1F7065DF005926B2 /* Assets.xcassets */; };
@@ -55,12 +63,21 @@
 		D46059CB1F708D280030D3D7 /* feedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = feedCell.h; sourceTree = "<group>"; };
 		D46059CC1F708D280030D3D7 /* feedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = feedCell.m; sourceTree = "<group>"; };
 		D46059CD1F708D280030D3D7 /* feedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = feedCell.xib; sourceTree = "<group>"; };
-		D46059F21F70AC670030D3D7 /* CCLocalMaximum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLocalMaximum.m; path = ../../../Desktop/CCLocalMaximum.m; sourceTree = "<group>"; };
-		D46059F31F70AC670030D3D7 /* CCColorCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCColorCube.m; path = ../../../Desktop/CCColorCube.m; sourceTree = "<group>"; };
-		D46059F41F70AC670030D3D7 /* CCColorCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCColorCube.h; path = ../../../Desktop/CCColorCube.h; sourceTree = "<group>"; };
-		D46059F51F70AC670030D3D7 /* CCLocalMaximum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCLocalMaximum.h; path = ../../../Desktop/CCLocalMaximum.h; sourceTree = "<group>"; };
 		D46059FA1F70CA980030D3D7 /* muffin.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = muffin.jpeg; sourceTree = "<group>"; };
 		D46059FC1F70D0680030D3D7 /* cinnabon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cinnabon.jpeg; sourceTree = "<group>"; };
+		D4835DBF1F718CD200F1FF61 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D4835DC81F718D6E00F1FF61 /* UIColor+YUVSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+YUVSpace.m"; path = "../../../Downloads/LEColorPicker-master/LEColorPicker/UIColor+YUVSpace.m"; sourceTree = "<group>"; };
+		D4835DC91F718D6E00F1FF61 /* LEColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEColorPicker.h; path = "../../../Downloads/LEColorPicker-master/LEColorPicker/LEColorPicker.h"; sourceTree = "<group>"; };
+		D4835DCA1F718D6E00F1FF61 /* UIColor+YUVSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+YUVSpace.h"; path = "../../../Downloads/LEColorPicker-master/LEColorPicker/UIColor+YUVSpace.h"; sourceTree = "<group>"; };
+		D4835DCB1F718D6E00F1FF61 /* LEColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEColorPicker.m; path = "../../../Downloads/LEColorPicker-master/LEColorPicker/LEColorPicker.m"; sourceTree = "<group>"; };
+		D4835DCE1F719E0E00F1FF61 /* pickup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickup.png; sourceTree = "<group>"; };
+		D4835DCF1F719E0E00F1FF61 /* sugar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sugar.png; sourceTree = "<group>"; };
+		D4835DD01F719E0E00F1FF61 /* delivery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delivery.png; sourceTree = "<group>"; };
+		D4835DD11F719E0E00F1FF61 /* dairy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dairy.png; sourceTree = "<group>"; };
+		D4835DD21F719E0E00F1FF61 /* wheat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheat.png; sourceTree = "<group>"; };
+		D4835DD31F719E0E00F1FF61 /* nut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nut.png; sourceTree = "<group>"; };
+		D4835DD41F719E0E00F1FF61 /* milk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milk.png; sourceTree = "<group>"; };
+		D4835DDC1F71A0B100F1FF61 /* pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay.png; sourceTree = "<group>"; };
 		D4A80AE31F7065DF005926B2 /* Food Stand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Stand.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A80AE61F7065DF005926B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4A80AE71F7065DF005926B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +114,7 @@
 		910211CDEC6F73916131582F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4835DBF1F718CD200F1FF61 /* OpenGLES.framework */,
 				D46059B31F7077FD0030D3D7 /* UserNotifications.framework */,
 				D46059AE1F706C2A0030D3D7 /* MapKit.framework */,
 				D46059AD1F706C240030D3D7 /* CoreLocation.framework */,
@@ -108,6 +126,14 @@
 		D46059BE1F707CAE0030D3D7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D4835DDC1F71A0B100F1FF61 /* pay.png */,
+				D4835DD11F719E0E00F1FF61 /* dairy.png */,
+				D4835DD01F719E0E00F1FF61 /* delivery.png */,
+				D4835DD41F719E0E00F1FF61 /* milk.png */,
+				D4835DD31F719E0E00F1FF61 /* nut.png */,
+				D4835DCE1F719E0E00F1FF61 /* pickup.png */,
+				D4835DCF1F719E0E00F1FF61 /* sugar.png */,
+				D4835DD21F719E0E00F1FF61 /* wheat.png */,
 				D46059FC1F70D0680030D3D7 /* cinnabon.jpeg */,
 				D46059FA1F70CA980030D3D7 /* muffin.jpeg */,
 				D46059C61F708BCB0030D3D7 /* cookies.jpg */,
@@ -149,10 +175,10 @@
 		D4A80AE51F7065DF005926B2 /* Food Stand */ = {
 			isa = PBXGroup;
 			children = (
-				D46059F41F70AC670030D3D7 /* CCColorCube.h */,
-				D46059F31F70AC670030D3D7 /* CCColorCube.m */,
-				D46059F51F70AC670030D3D7 /* CCLocalMaximum.h */,
-				D46059F21F70AC670030D3D7 /* CCLocalMaximum.m */,
+				D4835DC91F718D6E00F1FF61 /* LEColorPicker.h */,
+				D4835DCB1F718D6E00F1FF61 /* LEColorPicker.m */,
+				D4835DCA1F718D6E00F1FF61 /* UIColor+YUVSpace.h */,
+				D4835DC81F718D6E00F1FF61 /* UIColor+YUVSpace.m */,
 				D46059D61F70A9560030D3D7 /* Colors */,
 				D46059BE1F707CAE0030D3D7 /* Assets */,
 				D46059B41F7078350030D3D7 /* Food Stand.entitlements */,
@@ -243,6 +269,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4835DDD1F71A0B900F1FF61 /* pay.png in Resources */,
+				D4835DD51F719E1800F1FF61 /* dairy.png in Resources */,
+				D4835DD61F719E1800F1FF61 /* delivery.png in Resources */,
+				D4835DD71F719E1800F1FF61 /* milk.png in Resources */,
+				D4835DD81F719E1800F1FF61 /* nut.png in Resources */,
+				D4835DD91F719E1800F1FF61 /* pickup.png in Resources */,
+				D4835DDA1F719E1800F1FF61 /* sugar.png in Resources */,
+				D4835DDB1F719E1800F1FF61 /* wheat.png in Resources */,
 				D46059FD1F70D0740030D3D7 /* cinnabon.jpeg in Resources */,
 				D46059FB1F70CAA40030D3D7 /* muffin.jpeg in Resources */,
 				D46059C71F708BD20030D3D7 /* cookies.jpg in Resources */,
@@ -319,13 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46059F71F70AC680030D3D7 /* CCColorCube.m in Sources */,
 				D46059CE1F708D280030D3D7 /* feedCell.m in Sources */,
 				D4A80AEB1F7065DF005926B2 /* ViewController.m in Sources */,
-				D46059F61F70AC680030D3D7 /* CCLocalMaximum.m in Sources */,
 				D46059AC1F7069BC0030D3D7 /* References.m in Sources */,
 				D46059CA1F708C170030D3D7 /* foodItem.m in Sources */,
 				D4A80AF61F7065DF005926B2 /* main.m in Sources */,
+				D4835DCC1F718D6E00F1FF61 /* UIColor+YUVSpace.m in Sources */,
+				D4835DCD1F718D6E00F1FF61 /* LEColorPicker.m in Sources */,
 				D46059BD1F707CA50030D3D7 /* feedView.m in Sources */,
 				D4A80AE81F7065DF005926B2 /* AppDelegate.m in Sources */,
 			);
@@ -461,6 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fullytoasted.Food-Stand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -476,6 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fullytoasted.Food-Stand";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

@@ -15,11 +15,12 @@
 #import "References.h"
 #import "foodItem.h"
 #import "feedCell.h"
-#import "CCColorCube.h"
+#import "LEColorPicker.h"
 
 
 @interface feedView : UIViewController <CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate> {
     CLLocationManager *locationManager;
+    NSMutableArray *expandedRow;
     bool statusBar;
     NSMutableArray *foodItems;
     __weak IBOutlet UILabel *header;
@@ -33,6 +34,7 @@
     __weak IBOutlet UITableView *table;
     __weak IBOutlet UIScrollView *scroll;
     __weak IBOutlet UILabel *locationLabel;
+    __weak IBOutlet UILabel *animationSquare;
     
     
 }

@@ -21,4 +21,11 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)changeType:(id)sender {
+    if ([sender isOn]) {
+        _currentType.text = @"Delivery";
+    } else {
+        _currentType.text = @"Pickup";
+    }
+}
 @end
