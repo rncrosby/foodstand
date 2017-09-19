@@ -7,25 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2DB54E287D3C2A69AAA840 /* libPods-Food Stand.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4105EA6C4CCD8BF442D2AC6E /* libPods-Food Stand.a */; };
+		D46059AC1F7069BC0030D3D7 /* References.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059AB1F7069BC0030D3D7 /* References.m */; };
+		D46059B21F70714E0030D3D7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D46059B11F70714A0030D3D7 /* logo.png */; };
+		D46059B81F707C750030D3D7 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = D46059B61F707C680030D3D7 /* add.png */; };
+		D46059B91F707C750030D3D7 /* cookies.png in Resources */ = {isa = PBXBuildFile; fileRef = D46059B51F707C680030D3D7 /* cookies.png */; };
+		D46059BA1F707C750030D3D7 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = D46059B71F707C680030D3D7 /* profile.png */; };
+		D46059BD1F707CA50030D3D7 /* feedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059BC1F707CA50030D3D7 /* feedView.m */; };
+		D46059C01F707E2A0030D3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46059BF1F707CF80030D3D7 /* Main.storyboard */; };
+		D46059C21F70892A0030D3D7 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = D46059C11F7088EA0030D3D7 /* search.png */; };
+		D46059C71F708BD20030D3D7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D46059C61F708BCB0030D3D7 /* cookies.jpg */; };
+		D46059CA1F708C170030D3D7 /* foodItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059C91F708C170030D3D7 /* foodItem.m */; };
+		D46059CE1F708D280030D3D7 /* feedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059CC1F708D280030D3D7 /* feedCell.m */; };
+		D46059CF1F708D280030D3D7 /* feedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46059CD1F708D280030D3D7 /* feedCell.xib */; };
+		D46059F61F70AC680030D3D7 /* CCLocalMaximum.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059F21F70AC670030D3D7 /* CCLocalMaximum.m */; };
+		D46059F71F70AC680030D3D7 /* CCColorCube.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059F31F70AC670030D3D7 /* CCColorCube.m */; };
+		D46059FB1F70CAA40030D3D7 /* muffin.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D46059FA1F70CA980030D3D7 /* muffin.jpeg */; };
+		D46059FD1F70D0740030D3D7 /* cinnabon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D46059FC1F70D0680030D3D7 /* cinnabon.jpeg */; };
 		D4A80AE81F7065DF005926B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A80AE71F7065DF005926B2 /* AppDelegate.m */; };
 		D4A80AEB1F7065DF005926B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A80AEA1F7065DF005926B2 /* ViewController.m */; };
-		D4A80AEE1F7065DF005926B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A80AEC1F7065DF005926B2 /* Main.storyboard */; };
 		D4A80AF01F7065DF005926B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A80AEF1F7065DF005926B2 /* Assets.xcassets */; };
 		D4A80AF31F7065DF005926B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A80AF11F7065DF005926B2 /* LaunchScreen.storyboard */; };
 		D4A80AF61F7065DF005926B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A80AF51F7065DF005926B2 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4105EA6C4CCD8BF442D2AC6E /* libPods-Food Stand.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Food Stand.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FFC235949530DACE1FD271F /* Pods-Food Stand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Stand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food Stand/Pods-Food Stand.debug.xcconfig"; sourceTree = "<group>"; };
+		BB8CF75FE6447C6CD223DBF7 /* Pods-Food Stand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Stand.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Stand/Pods-Food Stand.release.xcconfig"; sourceTree = "<group>"; };
+		D46059AA1F7069BC0030D3D7 /* References.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = References.h; sourceTree = "<group>"; };
+		D46059AB1F7069BC0030D3D7 /* References.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = References.m; sourceTree = "<group>"; };
+		D46059AD1F706C240030D3D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D46059AE1F706C2A0030D3D7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D46059B11F70714A0030D3D7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D46059B31F7077FD0030D3D7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D46059B41F7078350030D3D7 /* Food Stand.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Food Stand.entitlements"; sourceTree = "<group>"; };
+		D46059B51F707C680030D3D7 /* cookies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookies.png; sourceTree = "<group>"; };
+		D46059B61F707C680030D3D7 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		D46059B71F707C680030D3D7 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		D46059BB1F707CA50030D3D7 /* feedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = feedView.h; sourceTree = "<group>"; };
+		D46059BC1F707CA50030D3D7 /* feedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = feedView.m; sourceTree = "<group>"; };
+		D46059BF1F707CF80030D3D7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D46059C11F7088EA0030D3D7 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		D46059C61F708BCB0030D3D7 /* cookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cookies.jpg; sourceTree = "<group>"; };
+		D46059C81F708C170030D3D7 /* foodItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = foodItem.h; sourceTree = "<group>"; };
+		D46059C91F708C170030D3D7 /* foodItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = foodItem.m; sourceTree = "<group>"; };
+		D46059CB1F708D280030D3D7 /* feedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = feedCell.h; sourceTree = "<group>"; };
+		D46059CC1F708D280030D3D7 /* feedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = feedCell.m; sourceTree = "<group>"; };
+		D46059CD1F708D280030D3D7 /* feedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = feedCell.xib; sourceTree = "<group>"; };
+		D46059F21F70AC670030D3D7 /* CCLocalMaximum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLocalMaximum.m; path = ../../../Desktop/CCLocalMaximum.m; sourceTree = "<group>"; };
+		D46059F31F70AC670030D3D7 /* CCColorCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCColorCube.m; path = ../../../Desktop/CCColorCube.m; sourceTree = "<group>"; };
+		D46059F41F70AC670030D3D7 /* CCColorCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCColorCube.h; path = ../../../Desktop/CCColorCube.h; sourceTree = "<group>"; };
+		D46059F51F70AC670030D3D7 /* CCLocalMaximum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCLocalMaximum.h; path = ../../../Desktop/CCLocalMaximum.h; sourceTree = "<group>"; };
+		D46059FA1F70CA980030D3D7 /* muffin.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = muffin.jpeg; sourceTree = "<group>"; };
+		D46059FC1F70D0680030D3D7 /* cinnabon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cinnabon.jpeg; sourceTree = "<group>"; };
 		D4A80AE31F7065DF005926B2 /* Food Stand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Stand.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A80AE61F7065DF005926B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4A80AE71F7065DF005926B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D4A80AE91F7065DF005926B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D4A80AEA1F7065DF005926B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D4A80AED1F7065DF005926B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4A80AEF1F7065DF005926B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4A80AF21F7065DF005926B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4A80AF41F7065DF005926B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4A80AF51F7065DF005926B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4F91F3E1F70662D009382A0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +78,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E2DB54E287D3C2A69AAA840 /* libPods-Food Stand.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E7768F674B7EB5C12A6C2EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FFC235949530DACE1FD271F /* Pods-Food Stand.debug.xcconfig */,
+				BB8CF75FE6447C6CD223DBF7 /* Pods-Food Stand.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		910211CDEC6F73916131582F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D46059B31F7077FD0030D3D7 /* UserNotifications.framework */,
+				D46059AE1F706C2A0030D3D7 /* MapKit.framework */,
+				D46059AD1F706C240030D3D7 /* CoreLocation.framework */,
+				4105EA6C4CCD8BF442D2AC6E /* libPods-Food Stand.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D46059BE1F707CAE0030D3D7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D46059FC1F70D0680030D3D7 /* cinnabon.jpeg */,
+				D46059FA1F70CA980030D3D7 /* muffin.jpeg */,
+				D46059C61F708BCB0030D3D7 /* cookies.jpg */,
+				D46059C11F7088EA0030D3D7 /* search.png */,
+				D46059B11F70714A0030D3D7 /* logo.png */,
+				D46059B61F707C680030D3D7 /* add.png */,
+				D46059B51F707C680030D3D7 /* cookies.png */,
+				D46059B71F707C680030D3D7 /* profile.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		D46059D61F70A9560030D3D7 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Colors;
+			sourceTree = "<group>";
+		};
 		D4A80ADA1F7065DF005926B2 = {
 			isa = PBXGroup;
 			children = (
+				D4F91F3E1F70662D009382A0 /* Podfile */,
 				D4A80AE51F7065DF005926B2 /* Food Stand */,
 				D4A80AE41F7065DF005926B2 /* Products */,
+				0E7768F674B7EB5C12A6C2EB /* Pods */,
+				910211CDEC6F73916131582F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,15 +149,31 @@
 		D4A80AE51F7065DF005926B2 /* Food Stand */ = {
 			isa = PBXGroup;
 			children = (
+				D46059F41F70AC670030D3D7 /* CCColorCube.h */,
+				D46059F31F70AC670030D3D7 /* CCColorCube.m */,
+				D46059F51F70AC670030D3D7 /* CCLocalMaximum.h */,
+				D46059F21F70AC670030D3D7 /* CCLocalMaximum.m */,
+				D46059D61F70A9560030D3D7 /* Colors */,
+				D46059BE1F707CAE0030D3D7 /* Assets */,
+				D46059B41F7078350030D3D7 /* Food Stand.entitlements */,
 				D4A80AE61F7065DF005926B2 /* AppDelegate.h */,
 				D4A80AE71F7065DF005926B2 /* AppDelegate.m */,
 				D4A80AE91F7065DF005926B2 /* ViewController.h */,
 				D4A80AEA1F7065DF005926B2 /* ViewController.m */,
-				D4A80AEC1F7065DF005926B2 /* Main.storyboard */,
+				D46059BB1F707CA50030D3D7 /* feedView.h */,
+				D46059BC1F707CA50030D3D7 /* feedView.m */,
+				D46059BF1F707CF80030D3D7 /* Main.storyboard */,
 				D4A80AEF1F7065DF005926B2 /* Assets.xcassets */,
 				D4A80AF11F7065DF005926B2 /* LaunchScreen.storyboard */,
 				D4A80AF41F7065DF005926B2 /* Info.plist */,
 				D4A80AF51F7065DF005926B2 /* main.m */,
+				D46059AA1F7069BC0030D3D7 /* References.h */,
+				D46059AB1F7069BC0030D3D7 /* References.m */,
+				D46059C81F708C170030D3D7 /* foodItem.h */,
+				D46059C91F708C170030D3D7 /* foodItem.m */,
+				D46059CB1F708D280030D3D7 /* feedCell.h */,
+				D46059CC1F708D280030D3D7 /* feedCell.m */,
+				D46059CD1F708D280030D3D7 /* feedCell.xib */,
 			);
 			path = "Food Stand";
 			sourceTree = "<group>";
@@ -78,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4A80AF91F7065DF005926B2 /* Build configuration list for PBXNativeTarget "Food Stand" */;
 			buildPhases = (
+				E2E2DCA488E55311CBA18C55 /* [CP] Check Pods Manifest.lock */,
 				D4A80ADF1F7065DF005926B2 /* Sources */,
 				D4A80AE01F7065DF005926B2 /* Frameworks */,
 				D4A80AE11F7065DF005926B2 /* Resources */,
+				332D8A9F4B96C228504D648F /* [CP] Embed Pods Frameworks */,
+				12C9566ED70C422580B1CC54 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -102,6 +212,11 @@
 				TargetAttributes = {
 					D4A80AE21F7065DF005926B2 = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -128,21 +243,90 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46059FD1F70D0740030D3D7 /* cinnabon.jpeg in Resources */,
+				D46059FB1F70CAA40030D3D7 /* muffin.jpeg in Resources */,
+				D46059C71F708BD20030D3D7 /* cookies.jpg in Resources */,
+				D46059C21F70892A0030D3D7 /* search.png in Resources */,
+				D46059C01F707E2A0030D3D7 /* Main.storyboard in Resources */,
+				D46059B81F707C750030D3D7 /* add.png in Resources */,
+				D46059B91F707C750030D3D7 /* cookies.png in Resources */,
+				D46059CF1F708D280030D3D7 /* feedCell.xib in Resources */,
+				D46059BA1F707C750030D3D7 /* profile.png in Resources */,
+				D46059B21F70714E0030D3D7 /* logo.png in Resources */,
 				D4A80AF31F7065DF005926B2 /* LaunchScreen.storyboard in Resources */,
 				D4A80AF01F7065DF005926B2 /* Assets.xcassets in Resources */,
-				D4A80AEE1F7065DF005926B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12C9566ED70C422580B1CC54 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Food Stand/Pods-Food Stand-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Food Stand/Pods-Food Stand-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		332D8A9F4B96C228504D648F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Food Stand/Pods-Food Stand-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2E2DCA488E55311CBA18C55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Food Stand-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4A80ADF1F7065DF005926B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46059F71F70AC680030D3D7 /* CCColorCube.m in Sources */,
+				D46059CE1F708D280030D3D7 /* feedCell.m in Sources */,
 				D4A80AEB1F7065DF005926B2 /* ViewController.m in Sources */,
+				D46059F61F70AC680030D3D7 /* CCLocalMaximum.m in Sources */,
+				D46059AC1F7069BC0030D3D7 /* References.m in Sources */,
+				D46059CA1F708C170030D3D7 /* foodItem.m in Sources */,
 				D4A80AF61F7065DF005926B2 /* main.m in Sources */,
+				D46059BD1F707CA50030D3D7 /* feedView.m in Sources */,
 				D4A80AE81F7065DF005926B2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,14 +334,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D4A80AEC1F7065DF005926B2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4A80AED1F7065DF005926B2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D4A80AF11F7065DF005926B2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -275,8 +451,10 @@
 		};
 		D4A80AFA1F7065DF005926B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FFC235949530DACE1FD271F /* Pods-Food Stand.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Food Stand/Food Stand.entitlements";
 				DEVELOPMENT_TEAM = UD5W2M958Y;
 				INFOPLIST_FILE = "Food Stand/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -288,8 +466,10 @@
 		};
 		D4A80AFB1F7065DF005926B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB8CF75FE6447C6CD223DBF7 /* Pods-Food Stand.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Food Stand/Food Stand.entitlements";
 				DEVELOPMENT_TEAM = UD5W2M958Y;
 				INFOPLIST_FILE = "Food Stand/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -318,6 +498,7 @@
 				D4A80AFB1F7065DF005926B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
