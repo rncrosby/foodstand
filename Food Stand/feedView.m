@@ -9,7 +9,7 @@
 #import "feedView.h"
 
 #define SMALL 293
-#define BIG 430
+#define BIG 458
 
 @interface feedView ()
 
@@ -24,18 +24,30 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
     statusBar = NO;
-    foodItem *cookie = [[foodItem alloc] initWithImage:[UIImage imageNamed:@"cookies.jpg"] andName:@"Cookies"];
-    foodItem *muffin = [[foodItem alloc] initWithImage:[UIImage imageNamed:@"muffin.jpeg"] andName:@"Blueberry Muffins"];
-    foodItem *cinnabon = [[foodItem alloc] initWithImage:[UIImage imageNamed:@"cinnabon.jpeg"] andName:@"Cinnamon Rolls"];
     foodItems = [[NSMutableArray alloc] init];
-    [foodItems addObject:cookie];
-    [foodItems addObject:muffin];
-    [foodItems addObject:cinnabon];
-    expandedRow = [[NSMutableArray alloc] init];
-    [expandedRow addObject:@"SMALL"];
-    [expandedRow addObject:@"SMALL"];
-    [expandedRow addObject:@"SMALL"];
-    [table reloadData];
+        expandedRow = [[NSMutableArray alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithValue:YES];
+    CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Items" predicate:predicate];
+    [[CKContainer defaultContainer].publicCloudDatabase performQuery:query
+                                                        inZoneWithID:nil
+                                                   completionHandler:^(NSArray *results, NSError *error) {
+                                                       for (int a = 0; a < results.count; a++) {
+                                                           CKRecord *record = results[a];
+                                                           CKAsset *imageData = [record objectForKey:@"image"];
+                                                           NSNumber *qty = [record valueForKey:@"qty"];
+                                                           NSNumber *price = [record valueForKey:@"price"];
+                                                           NSNumber *delivers = [record valueForKey:@"delivers"];
+                                                           NSNumber *zip = [record valueForKey:@"zip"];
+                                                           UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageData.fileURL]];
+                                                           foodItem *food = [[foodItem alloc] initWithImage:image andName:[record valueForKey:@"name"] andDescription:[record valueForKey:@"descript"] andItem:[record valueForKey:@"item"] andQty:qty andZip:zip andDelivers:delivers andAllergy:[record valueForKey:@"allergy"] andSeller:[record valueForKey:@"seller"] andPrice:price];
+                                                           [foodItems addObject:food];
+                                                           [expandedRow addObject:@"SMALL"];
+                                                       }
+                                                       dispatch_async(dispatch_get_main_queue(), ^(){
+                                                           [table reloadData];
+                                                       });
+                                                   }];
+    
     [References tintUIButton:feedButton color:[header.textColor colorWithAlphaComponent:0.7] ];
     [References tintUIButton:postButton color:[header.textColor colorWithAlphaComponent:0.5]];
     [References blurView:backgroundBlur];
@@ -43,9 +55,13 @@
     [References cornerRadius:userImage radius:userImage.frame.size.height/2];
     [References createLine:bottomBar xPos:0 yPos:0 inFront:YES];
     [super viewDidLoad];
-    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{ @"fields" : @"id,name,picture.width(200).height(200)"}]startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{ @"fields" : @"id,name,email,picture.width(200).height(200)"}]startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
         if (!error) {
-            //NSString *nameOfLoginUser = [result valueForKey:@"name"];
+            [[NSUserDefaults standardUserDefaults] setObject:[result valueForKey:@"id"] forKey:@"id"];
+            [[NSUserDefaults standardUserDefaults] setObject:[result valueForKey:@"name"] forKey:@"name"];
+            [[NSUserDefaults standardUserDefaults] setObject:[result valueForKey:@"email"] forKey:@"email"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            NSLog(@"\n%@\n%@\n%@\n",[result valueForKey:@"name"],[result valueForKey:@"email"],[result valueForKey:@"id"]);
             NSString *imageStringOfLoginUser = [[[result valueForKey:@"picture"] valueForKey:@"data"] valueForKey:@"url"];
             UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageStringOfLoginUser]]];
             [userImage setBackgroundImage:image forState:UIControlStateNormal];
@@ -103,13 +119,15 @@
 
     foodItem *food = foodItems[indexPath.row];
     cell.name.text = food.name;
+    cell.descript.text = food.descript;
     [cell.image setImage:food.image];
     [References lightCardShadow:cell.shadow];
     [References lightCardShadow:cell.actualShadow2];
+    [References lightCardShadow:cell.payShadow];
     [References lightCardShadow:cell.actualShadow3];
     LEColorPicker *colorPicker = [[LEColorPicker alloc] init];
     LEColorScheme *colorScheme = [colorPicker colorSchemeFromImage:food.image];
-    
+    cell.quantity.delegate = self;
 //    CCColorCube *colorCube = [[CCColorCube alloc] init];
 //    NSArray *imgColors = [colorCube extractColorsFromImage:food.image flags:CCOnlyDistinctColors avoidColor:[UIColor blackColor]];
     [cell.card setBackgroundColor:[colorScheme backgroundColor]];
@@ -120,13 +138,44 @@
     [References cornerRadius:cell.image radius:17.0];
     [References cornerRadius:cell.topShadow radius:17.0];
     [References cornerRadius:cell.bottomShadow radius:17.0];
-    [References cornerRadius:cell.payButton radius:12.0];
+    [References cornerRadius:cell.payButton radius:17.0];
     [References cornerRadius:cell.card2 radius:17.0];
     [References cornerRadius:cell.bottomShadow2 radius:17.0];
     [References cornerRadius:cell.price radius:8.0];
     [cell setBackgroundColor:[UIColor clearColor]];
     [References blurView:cell.blur];
+    cell.payButton.tag = indexPath.row;
+    [cell.payButton
+     addTarget:self
+     action:@selector(proceedOrder:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+-(void)proceedOrder:(id)sender {
+    UIButton *button = (UIButton*)sender;
+    feedCell *cell = [table cellForRowAtIndexPath:[NSIndexPath indexPathForRow:button.tag inSection:0]];
+    foodItem *food = foodItems[button.tag];
+    bool delivery = false;
+    if ([cell.control isOn]) {
+        delivery = true;
+    }
+    CKRecord *record = [[CKRecord alloc] initWithRecordType:@"Orders"];
+    record[@"buyer"] = [[NSUserDefaults standardUserDefaults] objectForKey:@"id"];
+    record[@"seller"] = food.seller;
+    record[@"item"] = food.item;
+    record[@"delivery"] = [NSNumber numberWithBool:delivery];
+    record[@"qty"] = [NSNumber numberWithInt:cell.quantity.text.intValue];
+    record[@"price"] = [NSNumber numberWithInt:food.price.intValue];
+    [[CKContainer defaultContainer].publicCloudDatabase saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+        if (error) {
+            NSLog(@"%@",error.localizedDescription);
+        }
+    }];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

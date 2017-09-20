@@ -16,9 +16,9 @@
 #import "foodItem.h"
 #import "feedCell.h"
 #import "LEColorPicker.h"
+#import <CloudKit/CloudKit.h>
 
-
-@interface feedView : UIViewController <CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate> {
+@interface feedView : UIViewController <CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate> {
     CLLocationManager *locationManager;
     NSMutableArray *expandedRow;
     bool statusBar;

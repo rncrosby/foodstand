@@ -31,12 +31,13 @@
 		D4835DD91F719E1800F1FF61 /* pickup.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DCE1F719E0E00F1FF61 /* pickup.png */; };
 		D4835DDA1F719E1800F1FF61 /* sugar.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DCF1F719E0E00F1FF61 /* sugar.png */; };
 		D4835DDB1F719E1800F1FF61 /* wheat.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DD21F719E0E00F1FF61 /* wheat.png */; };
-		D4835DDD1F71A0B900F1FF61 /* pay.png in Resources */ = {isa = PBXBuildFile; fileRef = D4835DDC1F71A0B100F1FF61 /* pay.png */; };
 		D4A80AE81F7065DF005926B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A80AE71F7065DF005926B2 /* AppDelegate.m */; };
 		D4A80AEB1F7065DF005926B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A80AEA1F7065DF005926B2 /* ViewController.m */; };
 		D4A80AF01F7065DF005926B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A80AEF1F7065DF005926B2 /* Assets.xcassets */; };
 		D4A80AF31F7065DF005926B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A80AF11F7065DF005926B2 /* LaunchScreen.storyboard */; };
 		D4A80AF61F7065DF005926B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A80AF51F7065DF005926B2 /* main.m */; };
+		D4DB4A6E1F71DE120095BB6B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DB4A6D1F71DE120095BB6B /* CloudKit.framework */; };
+		D4DB4A711F71EACE0095BB6B /* pay.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D4DB4A701F71E9900095BB6B /* pay.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +78,6 @@
 		D4835DD21F719E0E00F1FF61 /* wheat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheat.png; sourceTree = "<group>"; };
 		D4835DD31F719E0E00F1FF61 /* nut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nut.png; sourceTree = "<group>"; };
 		D4835DD41F719E0E00F1FF61 /* milk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milk.png; sourceTree = "<group>"; };
-		D4835DDC1F71A0B100F1FF61 /* pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay.png; sourceTree = "<group>"; };
 		D4A80AE31F7065DF005926B2 /* Food Stand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Stand.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A80AE61F7065DF005926B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4A80AE71F7065DF005926B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +87,9 @@
 		D4A80AF21F7065DF005926B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4A80AF41F7065DF005926B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4A80AF51F7065DF005926B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4DB4A6D1F71DE120095BB6B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D4DB4A6F1F71E83E0095BB6B /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		D4DB4A701F71E9900095BB6B /* pay.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pay.jpeg; sourceTree = "<group>"; };
 		D4F91F3E1F70662D009382A0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E2DB54E287D3C2A69AAA840 /* libPods-Food Stand.a in Frameworks */,
+				D4DB4A6E1F71DE120095BB6B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,8 @@
 		910211CDEC6F73916131582F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4DB4A6F1F71E83E0095BB6B /* PassKit.framework */,
+				D4DB4A6D1F71DE120095BB6B /* CloudKit.framework */,
 				D4835DBF1F718CD200F1FF61 /* OpenGLES.framework */,
 				D46059B31F7077FD0030D3D7 /* UserNotifications.framework */,
 				D46059AE1F706C2A0030D3D7 /* MapKit.framework */,
@@ -126,7 +132,7 @@
 		D46059BE1F707CAE0030D3D7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				D4835DDC1F71A0B100F1FF61 /* pay.png */,
+				D4DB4A701F71E9900095BB6B /* pay.jpeg */,
 				D4835DD11F719E0E00F1FF61 /* dairy.png */,
 				D4835DD01F719E0E00F1FF61 /* delivery.png */,
 				D4835DD41F719E0E00F1FF61 /* milk.png */,
@@ -242,6 +248,9 @@
 							com.apple.Push = {
 								enabled = 1;
 							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -269,7 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4835DDD1F71A0B900F1FF61 /* pay.png in Resources */,
+				D4DB4A711F71EACE0095BB6B /* pay.jpeg in Resources */,
 				D4835DD51F719E1800F1FF61 /* dairy.png in Resources */,
 				D4835DD61F719E1800F1FF61 /* delivery.png in Resources */,
 				D4835DD71F719E1800F1FF61 /* milk.png in Resources */,

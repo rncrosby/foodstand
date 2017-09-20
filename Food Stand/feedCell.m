@@ -7,6 +7,7 @@
 //
 
 #import "feedCell.h"
+#import "foodItem.h"
 
 @implementation feedCell
 
@@ -23,9 +24,14 @@
 
 - (IBAction)changeType:(id)sender {
     if ([sender isOn]) {
-        _currentType.text = @"Delivery";
+        _currentType.text = @"DELIVERY";
     } else {
-        _currentType.text = @"Pickup";
+        _currentType.text = @"PICKUP";
     }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 @end
