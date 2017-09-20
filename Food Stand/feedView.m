@@ -18,6 +18,18 @@
 @implementation feedView
 
 - (void)viewDidLoad {
+    currentStyle = UIStatusBarStyleDefault;
+    receiptScroll.frame = CGRectMake(0, [References screenHeight], [References screenWidth], receiptScroll.frame.size.height);
+    blackOverlay = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [References screenWidth], [References screenHeight])];
+    [blackOverlay setBackgroundColor:[UIColor blackColor]];
+    blackOverlay.alpha = 0;
+    [self.view addSubview:blackOverlay];
+    [self.view bringSubviewToFront:blackOverlay];
+    [self.view bringSubviewToFront:receiptScroll];
+    [References lightCardShadow:receiptShadow];
+    [References cornerRadius:confirmOrder radius:8.0f];
+    [References cornerRadius:cancelOrder radius:8.0f];
+    [References cornerRadius:receiptCard radius:17.0f];
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -148,29 +160,42 @@
     [cell.payButton
      addTarget:self
      action:@selector(proceedOrder:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.payImage
+     addTarget:self
+     action:@selector(proceedOrder:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
 -(void)proceedOrder:(id)sender {
-    UIButton *button = (UIButton*)sender;
-    feedCell *cell = [table cellForRowAtIndexPath:[NSIndexPath indexPathForRow:button.tag inSection:0]];
-    foodItem *food = foodItems[button.tag];
-    bool delivery = false;
-    if ([cell.control isOn]) {
-        delivery = true;
-    }
-    CKRecord *record = [[CKRecord alloc] initWithRecordType:@"Orders"];
-    record[@"buyer"] = [[NSUserDefaults standardUserDefaults] objectForKey:@"id"];
-    record[@"seller"] = food.seller;
-    record[@"item"] = food.item;
-    record[@"delivery"] = [NSNumber numberWithBool:delivery];
-    record[@"qty"] = [NSNumber numberWithInt:cell.quantity.text.intValue];
-    record[@"price"] = [NSNumber numberWithInt:food.price.intValue];
-    [[CKContainer defaultContainer].publicCloudDatabase saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
-        if (error) {
-            NSLog(@"%@",error.localizedDescription);
-        }
+//    UIButton *button = (UIButton*)sender;
+//    feedCell *cell = [table cellForRowAtIndexPath:[NSIndexPath indexPathForRow:button.tag inSection:0]];
+//    foodItem *food = foodItems[button.tag];
+//    bool delivery = false;
+//    if ([cell.control isOn]) {
+//        delivery = true;
+//    }
+//    CKRecord *record = [[CKRecord alloc] initWithRecordType:@"Orders"];
+//    record[@"buyer"] = [[NSUserDefaults standardUserDefaults] objectForKey:@"id"];
+//    record[@"seller"] = food.seller;
+//    record[@"item"] = food.item;
+//    record[@"delivery"] = [NSNumber numberWithBool:delivery];
+//    record[@"qty"] = [NSNumber numberWithInt:cell.quantity.text.intValue];
+//    record[@"price"] = [NSNumber numberWithInt:food.price.intValue];
+//    [[CKContainer defaultContainer].publicCloudDatabase saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+//        if (error) {
+//            NSLog(@"%@",error.localizedDescription);
+//        }
+//    }];
+    currentStyle = UIStatusBarStyleLightContent;
+    [UIView animateWithDuration:0.4 animations:^(void){
+        [self setNeedsStatusBarAppearanceUpdate];
+        blackOverlay.alpha = 0.7;
+        receiptScroll.frame = CGRectMake(0, receiptScroll.frame.origin.y-receiptScroll.frame.size.height, [References screenWidth], receiptScroll.frame.size.height);
     }];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return currentStyle;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -283,5 +308,16 @@
                            }
                        }];
     }
+}
+- (IBAction)confirmOrder:(id)sender {
+}
+
+- (IBAction)cancelOrder:(id)sender {
+    currentStyle = UIStatusBarStyleDefault;
+    [UIView animateWithDuration:0.4 animations:^(void){
+        [self setNeedsStatusBarAppearanceUpdate];
+        blackOverlay.alpha = 0;
+        receiptScroll.frame = CGRectMake(0, receiptScroll.frame.origin.y+receiptScroll.frame.size.height, [References screenWidth], receiptScroll.frame.size.height);
+    }];
 }
 @end

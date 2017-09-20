@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E2DB54E287D3C2A69AAA840 /* libPods-Food Stand.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4105EA6C4CCD8BF442D2AC6E /* libPods-Food Stand.a */; };
+		D418F9501F721A9500246929 /* order.png in Resources */ = {isa = PBXBuildFile; fileRef = D418F94F1F7219C600246929 /* order.png */; };
 		D46059AC1F7069BC0030D3D7 /* References.m in Sources */ = {isa = PBXBuildFile; fileRef = D46059AB1F7069BC0030D3D7 /* References.m */; };
 		D46059B21F70714E0030D3D7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D46059B11F70714A0030D3D7 /* logo.png */; };
 		D46059B81F707C750030D3D7 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = D46059B61F707C680030D3D7 /* add.png */; };
@@ -44,6 +45,7 @@
 		4105EA6C4CCD8BF442D2AC6E /* libPods-Food Stand.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Food Stand.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFC235949530DACE1FD271F /* Pods-Food Stand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Stand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food Stand/Pods-Food Stand.debug.xcconfig"; sourceTree = "<group>"; };
 		BB8CF75FE6447C6CD223DBF7 /* Pods-Food Stand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Stand.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Stand/Pods-Food Stand.release.xcconfig"; sourceTree = "<group>"; };
+		D418F94F1F7219C600246929 /* order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order.png; sourceTree = "<group>"; };
 		D46059AA1F7069BC0030D3D7 /* References.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = References.h; sourceTree = "<group>"; };
 		D46059AB1F7069BC0030D3D7 /* References.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = References.m; sourceTree = "<group>"; };
 		D46059AD1F706C240030D3D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -132,6 +134,7 @@
 		D46059BE1F707CAE0030D3D7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D418F94F1F7219C600246929 /* order.png */,
 				D4DB4A701F71E9900095BB6B /* pay.jpeg */,
 				D4835DD11F719E0E00F1FF61 /* dairy.png */,
 				D4835DD01F719E0E00F1FF61 /* delivery.png */,
@@ -278,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D418F9501F721A9500246929 /* order.png in Resources */,
 				D4DB4A711F71EACE0095BB6B /* pay.jpeg in Resources */,
 				D4835DD51F719E1800F1FF61 /* dairy.png in Resources */,
 				D4835DD61F719E1800F1FF61 /* delivery.png in Resources */,

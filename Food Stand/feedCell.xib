@@ -163,8 +163,7 @@
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ubq-zW-SRL">
                         <rect key="frame" x="250" y="367" width="101" height="83"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" image="pay.jpeg"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.47843137250000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3 Miles Away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O9N-5w-S1f">
                         <rect key="frame" x="33" y="51" width="88" height="21"/>
@@ -205,6 +204,11 @@
                             <outlet property="delegate" destination="H2p-sc-9uM" id="BLw-Co-Ghs"/>
                         </connections>
                     </textField>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NLS-CP-DMJ">
+                        <rect key="frame" x="280" y="388" width="41" height="41"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" image="order.png"/>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -220,20 +224,21 @@
                 <outlet property="image" destination="7QP-fG-AUl" id="cTv-K1-JYp"/>
                 <outlet property="name" destination="cYf-WV-2aC" id="GsY-WB-KQr"/>
                 <outlet property="payButton" destination="Ubq-zW-SRL" id="C3a-7o-xBz"/>
+                <outlet property="payImage" destination="NLS-CP-DMJ" id="AC8-mp-J5L"/>
                 <outlet property="payShadow" destination="uZv-Sj-HGe" id="zQR-Zr-cvw"/>
                 <outlet property="price" destination="6jv-2n-0ER" id="eIh-Hn-Afs"/>
                 <outlet property="quantity" destination="uXq-hU-wtO" id="6Xg-RA-2L4"/>
                 <outlet property="shadow" destination="T0K-co-YXN" id="tYS-n6-DQ9"/>
                 <outlet property="topShadow" destination="Znl-5x-O5S" id="cvX-pe-1LP"/>
             </connections>
-            <point key="canvasLocation" x="-347.5" y="-113"/>
+            <point key="canvasLocation" x="-565" y="-105"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="dairy.png" width="100" height="100"/>
         <image name="delivery.png" width="100" height="100"/>
         <image name="nut.png" width="96" height="96"/>
-        <image name="pay.jpeg" width="1024" height="768"/>
+        <image name="order.png" width="100" height="100"/>
         <image name="pickup.png" width="100" height="100"/>
         <image name="sugar.png" width="100" height="100"/>
         <image name="wheat.png" width="100" height="100"/>

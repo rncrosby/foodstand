@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentType;
 @property (weak, nonatomic) IBOutlet UILabel *payShadow;
 @property (weak, nonatomic) IBOutlet UIButton *payButton;
+@property (weak, nonatomic) IBOutlet UIButton *payImage;
 @property (weak, nonatomic) IBOutlet UILabel *card2;
 @property (weak, nonatomic) IBOutlet UILabel *bottomShadow2;
 - (IBAction)changeType:(id)sender;

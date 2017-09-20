@@ -19,6 +19,7 @@
 #import <CloudKit/CloudKit.h>
 
 @interface feedView : UIViewController <CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate> {
+    UIStatusBarStyle currentStyle;
     CLLocationManager *locationManager;
     NSMutableArray *expandedRow;
     bool statusBar;
@@ -35,8 +36,17 @@
     __weak IBOutlet UIScrollView *scroll;
     __weak IBOutlet UILabel *locationLabel;
     __weak IBOutlet UILabel *animationSquare;
+    UILabel *blackOverlay;
+    // receipt
+    __weak IBOutlet UIScrollView *receiptScroll;
+    __weak IBOutlet UILabel *receiptCard;
+    __weak IBOutlet UILabel *receiptShadow;
+    __weak IBOutlet UIButton *confirmOrder;
+    __weak IBOutlet UIButton *cancelOrder;
     
-    
+   
 }
+- (IBAction)confirmOrder:(id)sender;
+- (IBAction)cancelOrder:(id)sender;
 
 @end
